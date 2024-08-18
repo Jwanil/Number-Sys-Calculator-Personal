@@ -1,0 +1,65 @@
+/* Add these styles for the header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #3a3f44, #1e2023);
+    padding: 10px 0;
+    z-index: 1001; /* Ensure it's above the navbar */
+}
+
+.main-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 5px 0 5px;
+}
+
+.sub-heading {
+    text-align: center;
+    font-size: 1rem;
+    color: #cfcfcf;
+    margin: 0 0 8px;
+}
+
+/* Modify the navbar styles */
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #3a3f44, #1e2023);
+    padding: 10px;
+    position: fixed;
+    top: 100px; /* Adjust this value based on your header height */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    list-style-type: none;
+}
+
+/* Rest of your CSS remains the same */
+.nav a {
+    text-decoration: none; 
+}
+.nav li {
+    padding: 10px 20px;
+    margin: 0 20px; /* Increase gap between buttons */
+    width: 150px; /* Set a fixed width for all buttons */
+    text-align: center; /* Center the text inside the buttons */
+    text-decoration: none;
+    color: #ffffff; /* White text for contrast */
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly transparent white button background */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    cursor: pointer;
+    list-style: none; /* Ensure no default list styling */
+}
+
+
+/* Hover Effect for Buttons */
+.nav li:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly brighter background on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
