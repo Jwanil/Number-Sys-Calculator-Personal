@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-
+import './CSS/Binary.css'
 const Binary = () => {
   const [value, setValue] = useState('');
 
@@ -126,33 +126,31 @@ const Binary = () => {
   }
   return (
     <>
-      <div>Binary</div>
+      <div className="calculator-container">
+      <div className="calculator-title">Binary Calculator</div>
       <input 
         autoFocus={true}
         ref={inputRef}
-        className='db'
+        className="calculator-input"
         type="text" 
         value={value} 
         onKeyDown={handleKeyDown}
-
       />
       
-      <div className='calculator-grid'>  
-        <div className='output'>
-          <div className='previous-inp'></div>
-          <div className='current-inp'></div>
-        </div>
-        <button className='two-block' onClick={handleClear}>AC</button>
-        <button onClick={handleDelete}>DEL</button>
-        <button className='three-block' onClick={() => handleClick('0')}>0</button>
-        <button className='three-block' onClick={() => handleClick('1')}>1</button>
-        <button className='two-block' onClick={() => handleClick('/')}>/</button>
-        <button className='two-block' onClick={() => handleClick('*')}>*</button>
-        <button className='two-block' onClick={() => handleClick('-')}>-</button>
-        <button className='two-block' onClick={() => handleClick('+')}>+</button>
-        <button className='two-block' onClick={() => handleClick('.')}>.</button>
-        <button className='two-block' onClick={() => handleRes('=')}>=</button>
+      <div className="calculator-grid">  
+        <button className="calculator-button two-block" onClick={handleClear}>AC</button>
+        <button className="calculator-button" onClick={handleDelete}>DEL</button>
+        
+        <button className="calculator-button three-block" onClick={() => handleClick('0')}>0</button>
+        <button className="calculator-button three-block" onClick={() => handleClick('1')}>1</button>
+        <button className="calculator-button operator-button" onClick={() => handleClick('*')}>*</button>
+        <button className="calculator-button operator-button" onClick={() => handleClick('-')}>-</button>
+        <button className="calculator-button operator-button" onClick={() => handleClick('+')}>+</button>
+        <button className="calculator-button operator-button" onClick={() => handleClick('/')}>/</button>
+        <button className="calculator-button" onClick={() => handleClick('.')}>.</button>
+        <button className="calculator-button equals-button" onClick={() => handleRes('=')}>=</button>
       </div>
+    </div>
     </>
   );
 };

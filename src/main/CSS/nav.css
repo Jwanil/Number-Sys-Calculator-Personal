@@ -31,7 +31,7 @@ header {
     background: linear-gradient(to right, #3a3f44, #1e2023);
     padding: 10px;
     position: fixed;
-    top: 100px; /* Adjust this value based on your header height */
+    top: 110px; /* Adjust this value based on your header height */
     left: 0;
     width: 100%;
     z-index: 1000;
